@@ -1,17 +1,15 @@
 public class Strasse {
     String name;
-    Spieler besitzer;
     int wert;
     int miete_original;
     int siedlungen;
     int stadt;
-    Spieler besitzer;
+    String besitzer;
     int miete;
 
-    public Strasse (String name/*, int position*/, Spieler besitzer, int wert, int miete_original) {
-        //super(name, /*, position ,*/besitzer);
+    public Strasse (String name/*, int position*/, String besitzer, int wert, int miete_original) {
+        //super(name, /*, position);
         this.name = name;
-        this.besitzer = besitzer;
         this.wert = wert;
         this.miete_original = miete_original;
         this.miete = miete_original;
@@ -71,11 +69,11 @@ public class Strasse {
         }
     }
 
-    public void setBesitzer(int position, Spieler besitzer) {
-        //DER SPIELER WIRD DANN BESITZER VON DIESEM FELD
+    public void setBesitzer(int position, String besitzer, Spieler spieler) {
+        this.besitzer = spieler.getName();
     }
 
-    public Spieler getBesitzer() {
+    public String getBesitzer() {
         return this.besitzer;
     }
 }

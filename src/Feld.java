@@ -51,15 +51,6 @@ public class Feld {
         aufbau.add(new Strasse("Jabbas Palast", null, 400, 50 ));
     }
 
-    /*public void setPosition(int position) {
-        this.position = position;
-    }
-
-    public int getPosition() {
-        return position;
-    }
-    */
-
     public void setName(String name) {
         this.name = name;
     }
@@ -68,11 +59,16 @@ public class Feld {
         return name;
     }
 
-    public int getPosition () {
-        return aufbau.get(.getPosition())+1;
+    public void setPosition(Spieler spieler) { //MUSS IRGENDWO NOCH spieler SPEZIFIZIEREN
+        int index = spieler.getStandort();
+        this.position = aufbau.indexOf(index);
     }
 
-    public void setPosition(int index){
-        this.position= aufbau.indexOf(this.getStandort ) +1;
+    public int getPosition(){
+        return this.position;
+    }
+
+    public Object getFeld(int position) {
+        return aufbau.get(position);
     }
 }

@@ -1,16 +1,17 @@
 public class Werk extends Strasse {
 
-    public Werk(String name, /*int position,*/, Spieler besitzer, int wert, int miete_original) {
+    public Werk(String name /*int position,*/, String besitzer, int wert, int miete_original) {
         super(name,/* position,*/ besitzer, wert, miete_original);
     }
 
-    public void setMiete(int miete_original, Spieler besitzer) {
-        if (/*BESITZER HAT BEIDER WERKE, DIE BONZE*/) {
+    public void setMiete(int miete_original, String besitzer) {
+        /* if (BESITZER HAT BEIDER WERKE, DIE BONZE) {
             this.miete = (int) ((Math.random()*6+1)+(Math.random()*6+1))*10;
         }
         else {
             this.miete = (int) ((Math.random()*6+1)+(Math.random()*6+1))*4;
         }
+        */
     }
 
     public void baueSiedlung(int siedlungen, int stadt) {
