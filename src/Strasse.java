@@ -1,4 +1,6 @@
-public class Strasse extends Feld {
+public class Strasse {
+    String name;
+    Spieler besitzer;
     int wert;
     int miete_original;
     int siedlungen;
@@ -7,7 +9,9 @@ public class Strasse extends Feld {
     int miete;
 
     public Strasse (String name/*, int position*/, Spieler besitzer, int wert, int miete_original) {
-        super(name, /*, position ,*/besitzer);
+        //super(name, /*, position ,*/besitzer);
+        this.name = name;
+        this.besitzer = besitzer;
         this.wert = wert;
         this.miete_original = miete_original;
         this.miete = miete_original;
@@ -33,6 +37,7 @@ public class Strasse extends Feld {
     public int getMiete() {
         return this.miete;
     }
+
 // ZU HAUSBAU UND ABBRUCH MUSS NOCH DIE GELD KOMPOMNENTE DER SPIELER
     public void baueSiedlung(int siedlungen, int stadt) {
         if(this.siedlungen < 5 && stadt == 0) { //Hausbau

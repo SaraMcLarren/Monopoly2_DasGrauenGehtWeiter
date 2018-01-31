@@ -20,5 +20,5 @@ public class Ereignisse extends Feld {
         karte.add(new Ereignisse("Ereignisfeld",6, "Alarm! It's a trap! Gehe drei Felder zurück."));
         karte.add(new Ereignisse("Ereignisfeld",7, "Schnell sein, du musst. Rücke vier Felder vor."));
     }
-    
+
 }

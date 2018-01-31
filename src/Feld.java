@@ -67,4 +67,12 @@ public class Feld {
     public String getName() {
         return name;
     }
+
+    public int getPosition () {
+        return aufbau.get(.getPosition())+1;
+    }
+
+    public void setPosition(int index){
+        this.position= aufbau.indexOf(this.getStandort ) +1;
+    }
 }
